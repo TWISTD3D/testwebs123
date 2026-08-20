@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — TianBio</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE. NOT FOR DIAGNOSTIC, THERAPEUTIC, OR CLINICAL APPLICATIONS.</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">天</div>
+      <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
+    </a>
+    <nav class="nav">
+      <a href="products.html" class="active">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <a href="account.html" class="icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count">1</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container-wide">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a><span>/</span>My Account
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 4rem; align-items: flex-start;">
+      
+      <!-- Sidebar -->
+      <aside>
+        <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Dr. Sarah Chen</h2>
+        <p class="mono" style="color: var(--text-mute); margin-bottom: 2rem; font-size: 11px;">Lab ID: TB-LAB-8842</p>
+        <ul style="list-style: none; border-left: 1px solid var(--line);">
+          <li style="padding: 0.8rem 1rem; border-left: 2px solid var(--red); margin-left: -1px;"><a href="#" style="color: var(--text); font-size: 14px;">Dashboard</a></li>
+          <li style="padding: 0.8rem 1rem;"><a href="#" style="color: var(--text-soft); font-size: 14px;">Order History</a></li>
+          <li style="padding: 0.8rem 1rem;"><a href="#" style="color: var(--text-soft); font-size: 14px;">Saved Addresses</a></li>
+          <li style="padding: 0.8rem 1rem;"><a href="#" style="color: var(--text-soft); font-size: 14px;">Wishlist</a></li>
+          <li style="padding: 0.8rem 1rem;"><a href="#" style="color: var(--text-soft); font-size: 14px;">Logout</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <div>
+        <h1 class="h-section" style="margin-bottom: 2rem;">Recent Orders</h1>
+        
+        <div style="border: 1px solid var(--line);">
+          <div style="padding: 1.5rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div class="mono" style="color: var(--text-mute); font-size: 11px;">ORDER #TB-2024-0415</div>
+              <div style="font-weight: 500; margin-top: 0.3rem;">2 Items · €533.00</div>
+            </div>
+            <div class="badge badge-red">Processing</div>
+          </div>
+          <div style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <svg viewBox="0 0 100 140" width="100%" height="100%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+              </div>
+              <div>
+                <div style="font-weight: 500;">BPC-157 Acetate</div>
+                <div class="mono" style="font-size: 11px; color: var(--text-mute);">TB-BPC157-5MG · Qty: 1</div>
+              </div>
+            </div>
+            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 11px;">View Order</a>
+          </div>
+        </div>
+
+        <div style="border: 1px solid var(--line); margin-top: 1.5rem;">
+          <div style="padding: 1.5rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div class="mono" style="color: var(--text-mute); font-size: 11px;">ORDER #TB-2024-0328</div>
+              <div style="font-weight: 500; margin-top: 0.3rem;">1 Item · €124.00</div>
+            </div>
+            <div class="badge">Delivered</div>
+          </div>
+          <div style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <svg viewBox="0 0 100 140" width="100%" height="100%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+              </div>
+              <div>
+                <div style="font-weight: 500;">Ghrelin (Human)</div>
+                <div class="mono" style="font-size: 11px; color: var(--text-mute);">TB-GHRELIN-2MG · Qty: 1</div>
+              </div>
+            </div>
+            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 11px;">View Invoice</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><div class="brand-mark">天</div><div class="brand-text">TianBio<small>Precision Research Peptides</small></div></a>
+      <p>TianBio supplies research chemicals exclusively for qualified laboratory research. Products are not medicines, dietary supplements, or food products.</p>
+    </div>
+    <div class="footer-col"><h5>Catalog</h5><ul><li><a href="products.html">Growth Factors</a></li><li><a href="products.html">Research Peptides</a></li><li><a href="products.html">Laboratory Reagents</a></li><li><a href="products.html">Reference Standards</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About TianBio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Terms of Sale</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Research Use Statement</a></li></ul></div>
+  </div>
+  <div class="footer-disclaimer">TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE.</div>
+  <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
+</footer>
+
+</body>
+</html>
