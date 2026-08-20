@@ -5,499 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TianBio supplies high-purity laboratory research peptides, growth factors, and reference standards. For laboratory research use only.">
 <title>TianBio — Precision Research Peptides</title>
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Crect x='22' y='22' width='56' height='56' fill='%23B30000'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='48' fill='white' text-anchor='middle'%3E%E5%A4%A9%3C/text%3E%3C/svg%3E">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
-
-<style>
-/* ============================================================
-   TIANBIO — MINIMALIST SCIENTIFIC SUPPLIER
-   01. Design Tokens
-   02. Reset & Base
-   03. Typography
-   04. Layout & Primitives
-   05. Header & Navigation
-   06. Hero
-   07. Featured Products
-   08. Purity & Quality (Grid)
-   09. Research Disclaimer
-   10. FAQ
-   11. Newsletter
-   12. Footer
-   13. Responsive
-   ============================================================ */
-
-/* 01. DESIGN TOKENS ---------------------------------------- */
-:root {
-  --bg:           #0A0A0A;
-  --bg-elev:      #121212;
-  --bg-soft:      #181818;
-  --text:         #FFFFFF;
-  --text-soft:    rgba(255,255,255,0.70);
-  --text-mute:    rgba(255,255,255,0.45);
-  --text-faint:   rgba(255,255,255,0.20);
-  --line:         rgba(255,255,255,0.12);
-  --line-soft:    rgba(255,255,255,0.06);
-  --red:          #B30000;
-  --red-soft:     rgba(179,0,0,0.15);
-  --red-line:     rgba(179,0,0,0.40);
-  
-  --sans: 'IBM Plex Sans', -apple-system, sans-serif;
-  --mono: 'IBM Plex Mono', 'Courier New', monospace;
-  
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 02. RESET & BASE ----------------------------------------- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
-input { font: inherit; color: inherit; }
-
-::selection { background: var(--red); color: #fff; }
-
-/* 03. TYPOGRAPHY ------------------------------------------- */
-h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
-
-.h-hero {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-.h-section {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-.eyebrow {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-mute);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.eyebrow::before {
-  content: '';
-  width: 16px;
-  height: 1px;
-  background: var(--red);
-}
-
-.lede {
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: var(--text-soft);
-  max-width: 60ch;
-  line-height: 1.7;
-}
-
-.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; }
-
-/* 04. LAYOUT & PRIMITIVES ---------------------------------- */
-.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-.container-wide { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
-
-.section { padding: 6rem 0; border-top: 1px solid var(--line); }
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.4rem;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--text);
-  transition: all 200ms var(--ease);
-  border-radius: 2px;
-}
-.btn:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
-.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
-.btn-red:hover { background: transparent; color: var(--red); border-color: var(--red); }
-.btn-lg { padding: 1.1rem 1.8rem; font-size: 14px; }
-
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.2rem 0.5rem;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border: 1px solid var(--line);
-  color: var(--text-soft);
-  border-radius: 2px;
-}
-.badge-red { color: var(--red); border-color: var(--red-line); background: var(--red-soft); }
-
-/* 05. HEADER & NAVIGATION ---------------------------------- */
-.ruo-banner {
-  background: var(--red);
-  color: #fff;
-  padding: 0.4rem 2rem;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(10,10,10,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-.header-inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.brand { display: flex; align-items: center; gap: 0.7rem; }
-.brand-mark {
-  width: 28px; height: 28px;
-  background: var(--red);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--sans); font-size: 18px; color: #fff;
-  font-weight: 500;
-}
-.brand-text {
-  font-size: 16px; font-weight: 500; letter-spacing: -0.01em;
-}
-.brand-text small { display: block; font-family: var(--mono); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mute); margin-top: 1px; font-weight: 400; }
-
-.nav { display: flex; gap: 1.8rem; }
-.nav a {
-  font-size: 13px; font-weight: 400;
-  color: var(--text-soft);
-  transition: color 200ms var(--ease);
-}
-.nav a:hover { color: var(--text); }
-.nav a.active { color: var(--text); }
-
-.header-actions { display: flex; align-items: center; gap: 0.2rem; }
-.icon-btn {
-  width: 36px; height: 36px;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-soft);
-  transition: color 200ms var(--ease);
-  border-radius: 2px;
-}
-.icon-btn:hover { color: var(--text); }
-.icon-btn svg { width: 18px; height: 18px; stroke-width: 1.5; }
-.icon-btn .count {
-  font-family: var(--mono); font-size: 9px;
-  background: var(--red); color: #fff;
-  width: 14px; height: 14px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(10px, -10px);
-}
-.icon-btn { position: relative; }
-
-.menu-toggle { display: none; }
-
-/* 06. HERO ------------------------------------------------- */
-.hero {
-  padding: 5rem 0 6rem;
-  border-bottom: 1px solid var(--line);
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.hero-content .eyebrow { margin-bottom: 1.5rem; }
-.hero-content h1 { margin-bottom: 1.5rem; }
-.hero-content .lede { margin-bottom: 2.5rem; }
-.hero-actions { display: flex; gap: 1rem; }
-
-.hero-visual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.vial-card {
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  padding: 1.5rem;
-  display: flex; align-items: center; justify-content: center;
-  aspect-ratio: 3/4;
-  transition: border-color 300ms var(--ease);
-}
-.vial-card:hover { border-color: var(--red-line); }
-.vial-card:nth-child(2) { transform: translateY(1.5rem); }
-
-/* 07. FEATURED PRODUCTS ------------------------------------ */
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-}
-.section-header .meta { font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.product-card {
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  transition: background 200ms var(--ease);
-}
-.product-card:hover { background: var(--bg-elev); }
-.product-image {
-  aspect-ratio: 1/1;
-  border-bottom: 1px solid var(--line);
-  padding: 2rem;
-  display: flex; align-items: center; justify-content: center;
-  position: relative;
-  background: var(--bg-soft);
-}
-.product-ruo { position: absolute; top: 1rem; left: 1rem; }
-.product-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-.product-cat { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
-.product-name { font-size: 1.1rem; margin-bottom: 1rem; font-weight: 400; }
-.product-specs { font-family: var(--mono); font-size: 11px; color: var(--text-soft); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
-.product-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--line-soft); }
-.product-price { font-size: 1.1rem; }
-.product-price small { display: block; font-family: var(--mono); font-size: 10px; color: var(--text-mute); }
-.product-add {
-  font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
-  color: var(--text-soft);
-  transition: color 200ms var(--ease);
-}
-.product-add:hover { color: var(--red); }
-
-/* 08. PURITY & QUALITY ------------------------------------ */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  margin-top: 3rem;
-}
-.stat-box {
-  background: var(--bg);
-  padding: 2rem;
-}
-.stat-num { font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-.stat-num small { font-size: 1rem; color: var(--text-mute); }
-.stat-lbl { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--red); margin-bottom: 0.8rem; }
-.stat-desc { font-size: 13px; color: var(--text-soft); line-height: 1.5; }
-
-.qa-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  margin-top: 3rem;
-}
-.qa-step { background: var(--bg); padding: 2rem; }
-.qa-num { font-family: var(--mono); font-size: 11px; color: var(--red); margin-bottom: 1rem; }
-.qa-step h4 { font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 500; }
-.qa-step p { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
-
-/* 09. RESEARCH DISCLAIMER ---------------------------------- */
-.disclaimer-block {
-  border: 1px solid var(--red-line);
-  background: var(--bg-elev);
-  padding: 3rem;
-  position: relative;
-  border-radius: 2px;
-}
-.disclaimer-block .eyebrow { color: var(--red); margin-bottom: 1.5rem; }
-.disclaimer-block .eyebrow::before { background: var(--red); }
-.disclaimer-block h2 { margin-bottom: 1.5rem; font-size: 1.6rem; }
-.disclaimer-block p { color: var(--text-soft); margin-bottom: 1rem; line-height: 1.7; }
-.disclaimer-block p:last-child { margin-bottom: 0; }
-.disclaimer-block strong { color: var(--text); font-weight: 500; }
-
-/* 10. FAQ -------------------------------------------------- */
-.faq-list { border-top: 1px solid var(--line); }
-.faq-item { border-bottom: 1px solid var(--line); }
-.faq-q {
-  width: 100%;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.5rem 0;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-.faq-toggle {
-  font-family: var(--mono); font-size: 14px; color: var(--text-mute);
-  transition: transform 200ms var(--ease);
-}
-.faq-item.is-open .faq-toggle { transform: rotate(45deg); color: var(--red); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height 300ms var(--ease); }
-.faq-item.is-open .faq-a { max-height: 200px; }
-.faq-a-inner { padding-bottom: 1.5rem; color: var(--text-soft); line-height: 1.7; max-width: 70ch; }
-
-/* 11. NEWSLETTER ------------------------------------------- */
-.newsletter-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.newsletter-form {
-  display: flex;
-  border-bottom: 1px solid var(--line);
-}
-.newsletter-form:focus-within { border-color: var(--text); }
-.newsletter-form input {
-  flex: 1; background: transparent; border: 0; padding: 0.8rem 0; outline: none; font-size: 14px;
-}
-.newsletter-form button {
-  font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
-  padding: 0 1rem; color: var(--text);
-}
-.newsletter-form button:hover { color: var(--red); }
-
-/* 12. FOOTER ----------------------------------------------- */
-.site-footer {
-  background: var(--bg);
-  border-top: 1px solid var(--line);
-  padding: 4rem 2rem 2rem;
-}
-.footer-grid {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--line);
-}
-.footer-brand p { font-size: 12px; color: var(--text-soft); margin-top: 1.5rem; max-width: 30ch; line-height: 1.6; }
-.footer-col h5 { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-mute); margin-bottom: 1.2rem; font-weight: 500; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-col a { font-size: 13px; color: var(--text-soft); }
-.footer-col a:hover { color: var(--red); }
-
-.footer-disclaimer {
-  max-width: 1440px; margin: 2rem auto;
-  font-family: var(--mono); font-size: 10px; color: var(--text-mute);
-  line-height: 1.6; letter-spacing: 0.02em;
-  padding-bottom: 2rem; border-bottom: 1px solid var(--line);
-}
-.footer-bottom {
-  max-width: 1440px; margin: 1.5rem auto 0;
-  display: flex; justify-content: space-between;
-  font-family: var(--mono); font-size: 10px; color: var(--text-mute);
-  text-transform: uppercase; letter-spacing: 0.1em;
-}
-
-/* 13. RESPONSIVE ------------------------------------------- */
-@media (max-width: 900px) {
-  .nav { display: none; }
-  .menu-toggle { display: flex; }
-  .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-grid, .qa-grid { grid-template-columns: repeat(2, 1fr); }
-  .newsletter-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 500px) {
-  .section { padding: 4rem 0; }
-  .container, .container-wide { padding: 0 1.2rem; }
-  .product-grid { grid-template-columns: 1fr; }
-  .stats-grid, .qa-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .disclaimer-block { padding: 2rem 1.2rem; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Crect x='22' y='22' width='56' height='56' fill='%23B30000'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='48' fill='white' text-anchor='middle'%3E%E5%A4%A9%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- Top Banner -->
 <div class="ruo-banner">
   FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE. NOT FOR DIAGNOSTIC, THERAPEUTIC, OR CLINICAL APPLICATIONS.
 </div>
 
-<!-- Header -->
 <header class="site-header">
   <div class="header-inner">
-    <a href="#" class="brand">
+    <a href="index.html" class="brand">
       <div class="brand-mark">天</div>
-      <div class="brand-text">
-        TianBio
-        <small>Precision Research Peptides</small>
-      </div>
+      <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
     </a>
-    
     <nav class="nav">
-      <a href="#catalog" class="active">Catalog</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Catalog</a>
       <a href="#purity">Purity</a>
-      <a href="#quality">Quality</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    
     <div class="header-actions">
-      <button class="icon-btn" aria-label="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Account">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Cart">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>
-        <span class="count" id="cartCount">0</span>
-      </button>
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <a href="account.html" class="icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count cart-count">0</span></a>
     </div>
   </div>
 </header>
 
 <main>
-  
   <!-- Hero -->
   <section class="hero">
     <div class="container-wide">
@@ -510,17 +51,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
             Supplied exclusively to qualified research institutions and licensed R&D laboratories.
           </p>
           <div class="hero-actions">
-            <a href="#catalog" class="btn btn-red btn-lg">Browse Catalog</a>
+            <a href="products.html" class="btn btn-red btn-lg">Browse Catalog</a>
             <a href="#purity" class="btn btn-lg">Research Information</a>
           </div>
         </div>
-        
         <div class="hero-visual">
           <div class="vial-card">
             <svg viewBox="0 0 100 140" width="100%" height="100%">
               <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
               <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="25" y="15" width="50" height="100" fill="#B30000" opacity="0.1"/>
               <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
               <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
               <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
@@ -533,7 +72,6 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
             <svg viewBox="0 0 100 140" width="100%" height="100%">
               <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
               <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="25" y="15" width="50" height="100" fill="#B30000" opacity="0.1"/>
               <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
               <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
               <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
@@ -559,32 +97,19 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
       </div>
 
       <div class="product-grid">
-        
         <!-- Product 1 -->
         <article class="product-card">
           <div class="product-image">
             <span class="badge badge-red product-ruo">RUO</span>
-            <svg viewBox="0 0 100 140" width="60%" height="60%">
-              <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
-              <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
-              <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
-              <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
-              <text x="40" y="48" font-family="monospace" font-size="4" fill="#0A0A0A">TB-BPC157</text>
-              <text x="24" y="70" font-family="monospace" font-size="3" fill="#B30000" font-weight="bold">RUO</text>
-            </svg>
+            <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
           </div>
           <div class="product-body">
             <div class="product-cat">TB-BPC157-5MG</div>
-            <h3 class="product-name">BPC-157 Acetate</h3>
-            <div class="product-specs">
-              <span>Purity: 99.2%</span>
-              <span>MW: 1419.5 g/mol</span>
-              <span>Lot: TB-2403-A14</span>
-            </div>
+            <h3 class="product-name"><a href="product.html">BPC-157 Acetate</a></h3>
+            <div class="product-specs"><span>Purity: 99.2%</span><span>MW: 1419.5 g/mol</span></div>
             <div class="product-footer">
               <div class="product-price">€68<small>5 mg vial</small></div>
-              <button class="product-add" data-name="BPC-157 Acetate">Add to cart →</button>
+              <button class="product-add" onclick="addToCart('BPC-157 Acetate', 'TB-BPC157-5MG', 68.00)">Add to cart →</button>
             </div>
           </div>
         </article>
@@ -593,27 +118,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         <article class="product-card">
           <div class="product-image">
             <span class="badge badge-red product-ruo">RUO</span>
-            <svg viewBox="0 0 100 140" width="60%" height="60%">
-              <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
-              <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
-              <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
-              <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
-              <text x="40" y="48" font-family="monospace" font-size="4" fill="#0A0A0A">TB-GHRELIN</text>
-              <text x="24" y="70" font-family="monospace" font-size="3" fill="#B30000" font-weight="bold">RUO</text>
-            </svg>
+            <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
           </div>
           <div class="product-body">
             <div class="product-cat">TB-GHRELIN-2MG</div>
-            <h3 class="product-name">Ghrelin (Human)</h3>
-            <div class="product-specs">
-              <span>Purity: 98.6%</span>
-              <span>MW: 3370.9 g/mol</span>
-              <span>Lot: TB-2402-G07</span>
-            </div>
+            <h3 class="product-name"><a href="product.html">Ghrelin (Human)</a></h3>
+            <div class="product-specs"><span>Purity: 98.6%</span><span>MW: 3370.9 g/mol</span></div>
             <div class="product-footer">
               <div class="product-price">€124<small>2 mg vial</small></div>
-              <button class="product-add" data-name="Ghrelin (Human)">Add to cart →</button>
+              <button class="product-add" onclick="addToCart('Ghrelin (Human)', 'TB-GHRELIN-2MG', 124.00)">Add to cart →</button>
             </div>
           </div>
         </article>
@@ -622,27 +135,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         <article class="product-card">
           <div class="product-image">
             <span class="badge badge-red product-ruo">RUO</span>
-            <svg viewBox="0 0 100 140" width="60%" height="60%">
-              <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
-              <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
-              <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
-              <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
-              <text x="40" y="48" font-family="monospace" font-size="4" fill="#0A0A0A">TB-SEMAG</text>
-              <text x="24" y="70" font-family="monospace" font-size="3" fill="#B30000" font-weight="bold">RUO</text>
-            </svg>
+            <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
           </div>
           <div class="product-body">
             <div class="product-cat">TB-SEMAG-10MG</div>
-            <h3 class="product-name">Semaglutide Reference</h3>
-            <div class="product-specs">
-              <span>Purity: 99.5%</span>
-              <span>MW: 4113.6 g/mol</span>
-              <span>Lot: TB-2403-S22</span>
-            </div>
+            <h3 class="product-name"><a href="product.html">Semaglutide Ref.</a></h3>
+            <div class="product-specs"><span>Purity: 99.5%</span><span>MW: 4113.6 g/mol</span></div>
             <div class="product-footer">
               <div class="product-price">€210<small>10 mg vial</small></div>
-              <button class="product-add" data-name="Semaglutide Reference">Add to cart →</button>
+              <button class="product-add" onclick="addToCart('Semaglutide Ref.', 'TB-SEMAG-10MG', 210.00)">Add to cart →</button>
             </div>
           </div>
         </article>
@@ -651,31 +152,18 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         <article class="product-card">
           <div class="product-image">
             <span class="badge badge-red product-ruo">RUO</span>
-            <svg viewBox="0 0 100 140" width="60%" height="60%">
-              <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
-              <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
-              <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
-              <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
-              <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
-              <text x="40" y="48" font-family="monospace" font-size="4" fill="#0A0A0A">TB-TB500</text>
-              <text x="24" y="70" font-family="monospace" font-size="3" fill="#B30000" font-weight="bold">RUO</text>
-            </svg>
+            <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
           </div>
           <div class="product-body">
             <div class="product-cat">TB-TB500-5MG</div>
-            <h3 class="product-name">TB-500 Fragment</h3>
-            <div class="product-specs">
-              <span>Purity: 99.0%</span>
-              <span>MW: 4161.8 g/mol</span>
-              <span>Lot: TB-2401-T15</span>
-            </div>
+            <h3 class="product-name"><a href="product.html">TB-500 Fragment</a></h3>
+            <div class="product-specs"><span>Purity: 99.0%</span><span>MW: 4161.8 g/mol</span></div>
             <div class="product-footer">
               <div class="product-price">€82<small>5 mg vial</small></div>
-              <button class="product-add" data-name="TB-500 Fragment">Add to cart →</button>
+              <button class="product-add" onclick="addToCart('TB-500 Fragment', 'TB-TB500-5MG', 82.00)">Add to cart →</button>
             </div>
           </div>
         </article>
-
       </div>
     </div>
   </section>
@@ -690,235 +178,64 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
           Purity is not a marketing number. Each lot is tested by reversed-phase HPLC, MALDI-TOF mass spectrometry, and quantitative amino-acid analysis. We do not ship any lot below 98% purity.
         </p>
       </div>
-
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-lbl">Average Purity</div>
-          <div class="stat-num">99.2<small>%</small></div>
-          <div class="stat-desc">Mean of 184 lots released in Q1, weighted by catalog volume.</div>
+      <div class="product-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="product-card" style="padding: 2rem;">
+          <div class="mono" style="color: var(--red); font-size: 11px; margin-bottom: 1rem;">AVERAGE PURITY</div>
+          <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">99.2%</div>
+          <div style="font-size: 13px; color: var(--text-soft);">Mean of 184 lots released in Q1, weighted by catalog volume.</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-lbl">Verification</div>
-          <div class="stat-num">3<small>×</small></div>
-          <div class="stat-desc">Independent analytical methods applied to every peptide lot.</div>
+        <div class="product-card" style="padding: 2rem;">
+          <div class="mono" style="color: var(--red); font-size: 11px; margin-bottom: 1rem;">VERIFICATION</div>
+          <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">3×</div>
+          <div style="font-size: 13px; color: var(--text-soft);">Independent analytical methods applied to every peptide lot.</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-lbl">CoA Archive</div>
-          <div class="stat-num">7<small> yr</small></div>
-          <div class="stat-desc">Lot documentation retained and retrievable by lot number.</div>
+        <div class="product-card" style="padding: 2rem;">
+          <div class="mono" style="color: var(--red); font-size: 11px; margin-bottom: 1rem;">COA ARCHIVE</div>
+          <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">7 yr</div>
+          <div style="font-size: 13px; color: var(--text-soft);">Lot documentation retained and retrievable by lot number.</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-lbl">Quality Control</div>
-          <div class="stat-num">0<small></small></div>
-          <div class="stat-desc">Sub-98% lots released since catalog inception.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quality Assurance -->
-  <section class="section" id="quality">
-    <div class="container-wide">
-      <div style="max-width: 800px; margin-bottom: 2rem;">
-        <div class="eyebrow">Quality Assurance</div>
-        <h2 class="h-section" style="margin-top: 1rem;">From synthesis to your bench, four checkpoints.</h2>
-      </div>
-
-      <div class="qa-grid">
-        <div class="qa-step">
-          <div class="qa-num">01</div>
-          <h4>Synthesis &amp; Purification</h4>
-          <p>Solid-phase peptide synthesis followed by preparative HPLC purification. Crude batches held in quarantine until pre-release testing clears them.</p>
-        </div>
-        <div class="qa-step">
-          <div class="qa-num">02</div>
-          <h4>Analytical Verification</h4>
-          <p>RP-HPLC, MALDI-TOF, and AAA confirm identity and purity. Results written to the lot's Certificate of Analysis and signed by the analytical chemist.</p>
-        </div>
-        <div class="qa-step">
-          <div class="qa-num">03</div>
-          <h4>Lyophilisation &amp; Packaging</h4>
-          <p>Verified material is lyophilised, weighed under inert atmosphere, and sealed in amber glass vials with tamper-evident caps and RUO labels.</p>
-        </div>
-        <div class="qa-step">
-          <div class="qa-num">04</div>
-          <h4>Cold-Chain Dispatch</h4>
-          <p>Vials ship in insulated containers with cold packs maintained at −20°C. Temperature loggers included on international shipments.</p>
+        <div class="product-card" style="padding: 2rem;">
+          <div class="mono" style="color: var(--red); font-size: 11px; margin-bottom: 1rem;">QUALITY CONTROL</div>
+          <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">0</div>
+          <div style="font-size: 13px; color: var(--text-soft);">Sub-98% lots released since catalog inception.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Research Disclaimer -->
-  <section class="section" style="background: var(--bg-soft);">
+  <section class="section">
     <div class="container">
-      <div class="disclaimer-block">
-        <div class="eyebrow">Research Use Only</div>
-        <h2>TianBio products are intended exclusively for in vitro laboratory research and analytical applications.</h2>
-        <p>
-          <strong>Products are not for human or veterinary use.</strong> They are not medicines, dietary supplements, food products, or cosmetics. They must not be used for diagnostic, therapeutic, or clinical purposes, and must not be administered to any living organism.
+      <div style="border: 1px solid var(--red-line); background: var(--bg-elev); padding: 3rem; border-radius: 2px;">
+        <div class="eyebrow" style="color: var(--red); margin-bottom: 1.5rem;">Research Use Only</div>
+        <h2 class="h-section" style="margin-bottom: 1.5rem; font-size: 1.6rem;">TianBio products are intended exclusively for in vitro laboratory research and analytical applications.</h2>
+        <p style="color: var(--text-soft); margin-bottom: 1rem; line-height: 1.7;">
+          <strong style="color: var(--text);">Products are not for human or veterinary use.</strong> They are not medicines, dietary supplements, food products, or cosmetics. They must not be used for diagnostic, therapeutic, or clinical purposes.
         </p>
-        <p>
-          TianBio supplies research chemicals exclusively to qualified laboratory research personnel at universities, accredited research institutions, pharmaceutical R&amp;D groups, and licensed analytical laboratories. Purchasers are required to confirm that products are being acquired solely for legitimate laboratory research purposes at checkout.
+        <p style="color: var(--text-soft); line-height: 1.7;">
+          TianBio supplies research chemicals exclusively to qualified laboratory research personnel. Purchasers are required to confirm that products are being acquired solely for legitimate laboratory research purposes at checkout.
         </p>
-        <p>
-          <strong>TianBio does not provide dosage information, usage protocols, or any guidance related to biological activity in living organisms.</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div style="margin-bottom: 3rem; text-align: center;">
-        <div class="eyebrow" style="justify-content: center;">Frequently Asked</div>
-        <h2 class="h-section" style="margin-top: 1rem;">Practical questions from laboratory researchers.</h2>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>What does "Research Use Only" mean?</span>
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            "Research Use Only" (RUO) means the product is supplied exclusively for in vitro laboratory research, analytical testing, and reference applications. RUO products are not intended for human or veterinary use, clinical diagnosis, therapeutic treatment, or food/cosmetic applications.
-          </div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>Who can purchase from TianBio?</span>
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            TianBio supplies research institutions, university laboratories, pharmaceutical R&amp;D groups, contract research organisations, and licensed analytical laboratories. We may request verification of institutional affiliation before processing a first order. We do not ship to residential addresses.
-          </div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>Are Certificates of Analysis available?</span>
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            Yes. Every lot ships with a lot-specific Certificate of Analysis showing the HPLC chromatogram, mass-spectrum confirmation, purity percentage, and net content. CoAs are also available electronically by searching the catalog number and lot number.
-          </div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>Can TianBio provide usage protocols or dosage guidance?</span>
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            No. TianBio does not provide usage protocols, dosage information, or any guidance related to biological activity in living organisms. Our products are supplied for in vitro research only. Researchers should consult the primary literature for experimental design.
-          </div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="section" id="contact" style="background: var(--bg-soft);">
-    <div class="container">
-      <div class="newsletter-grid">
-        <div>
-          <div class="eyebrow">Catalog Updates</div>
-          <h2 class="h-section" style="margin-top: 1rem;">New reference standards, released quarterly.</h2>
-          <p class="lede" style="margin-top: 1.2rem;">
-            Receive the quarterly catalog supplement and CoA archive updates. Approximately four emails per year. No marketing.
-          </p>
-        </div>
-        <div>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="institutional.email@university.edu" required>
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="mono" style="margin-top: 1rem; font-size: 10px; color: var(--text-mute);">
-            We recommend using an institutional email address.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="brand">
-        <div class="brand-mark">天</div>
-        <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
-      </a>
+      <a href="index.html" class="brand"><div class="brand-mark">天</div><div class="brand-text">TianBio<small>Precision Research Peptides</small></div></a>
       <p>TianBio supplies research chemicals exclusively for qualified laboratory research. Products are not medicines, dietary supplements, or food products.</p>
     </div>
-    <div class="footer-col">
-      <h5>Catalog</h5>
-      <ul>
-        <li><a href="#catalog">Growth Factors</a></li>
-        <li><a href="#catalog">Research Peptides</a></li>
-        <li><a href="#catalog">Laboratory Reagents</a></li>
-        <li><a href="#catalog">Reference Standards</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Company</h5>
-      <ul>
-        <li><a href="#quality">Quality Assurance</a></li>
-        <li><a href="#purity">Purity Standards</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="#">Terms of Sale</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="#">Research Use Statement</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h5>Catalog</h5><ul><li><a href="products.html">Growth Factors</a></li><li><a href="products.html">Research Peptides</a></li><li><a href="products.html">Laboratory Reagents</a></li><li><a href="products.html">Reference Standards</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About TianBio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Terms of Sale</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Research Use Statement</a></li></ul></div>
   </div>
-
-  <div class="footer-disclaimer">
-    TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE. NOT FOR DIAGNOSTIC, THERAPEUTIC, OR CLINICAL APPLICATIONS. ALL PRODUCTS ARE SHIPPED WITH A RESEARCH USE ONLY LABEL AND LOT-SPECIFIC CERTIFICATE OF ANALYSIS.
-  </div>
-
-  <div class="footer-bottom">
-    <div>© 2024 TianBio · Catalog v2.4.1</div>
-    <div>FOR LABORATORY RESEARCH USE ONLY</div>
-  </div>
+  <div class="footer-disclaimer">TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE. NOT FOR DIAGNOSTIC, THERAPEUTIC, OR CLINICAL APPLICATIONS. ALL PRODUCTS ARE SHIPPED WITH A RESEARCH USE ONLY LABEL AND LOT-SPECIFIC CERTIFICATE OF ANALYSIS.</div>
+  <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
 </footer>
 
-<script>
-// Minimalist JS for FAQ and Cart Count
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-    item.classList.toggle('is-open');
-  });
-});
-
-let cartCount = 0;
-const cartCountEl = document.getElementById('cartCount');
-
-document.querySelectorAll('.product-add').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    cartCount++;
-    cartCountEl.textContent = cartCount;
-  });
-});
-
-// Newsletter form prevention
-document.getElementById('newsletterForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.reset();
-  alert('Subscription received. Please confirm via your institutional email.');
-});
-</script>
-
+<div id="toast-wrap" class="toast-wrap"></div>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checkout — TianBio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE. NOT FOR DIAGNOSTIC, THERAPEUTIC, OR CLINICAL APPLICATIONS.</div>
+<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE.</div>
 
 <header class="site-header">
   <div class="header-inner">
@@ -17,13 +20,13 @@
       <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
     </a>
     <nav class="nav">
-      <a href="products.html" class="active">Catalog</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Catalog</a>
       <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count">1</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count cart-count">0</span></a>
     </div>
   </div>
 </header>
@@ -36,116 +39,48 @@
 
     <h1 class="h-section" style="margin-bottom: 3rem;">Secure Checkout</h1>
 
-    <form id="checkoutForm" style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: flex-start;" onsubmit="return false;">
+    <form id="checkout-form" class="checkout-grid">
       
-      <!-- Form Fields -->
       <div>
         <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem;">1. Laboratory & Contact Information</h3>
         <div class="form-grid-2">
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Organization / Lab</label>
-            <input type="text" class="form-input" required>
-          </div>
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" required></div>
+          <div class="form-group"><label class="form-label">Organization / Lab</label><input type="text" class="form-input" required></div>
         </div>
         <div class="form-grid-2">
-          <div class="form-group">
-            <label class="form-label">Institutional Email</label>
-            <input type="email" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" class="form-input" required>
-          </div>
+          <div class="form-group"><label class="form-label">Institutional Email</label><input type="email" class="form-input" required></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" required></div>
         </div>
 
         <h3 style="font-size: 1.2rem; margin: 2rem 0 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem;">2. Billing Address</h3>
-        <div class="form-group">
-          <label class="form-label">Street Address</label>
-          <input type="text" class="form-input" required>
-        </div>
+        <div class="form-group"><label class="form-label">Street Address</label><input type="text" class="form-input" required></div>
         <div class="form-grid-2">
-          <div class="form-group">
-            <label class="form-label">City</label>
-            <input type="text" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Postal Code</label>
-            <input type="text" class="form-input" required>
-          </div>
+          <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input" required></div>
+          <div class="form-group"><label class="form-label">Postal Code</label><input type="text" class="form-input" required></div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Country</label>
-          <select class="form-input" required>
-            <option value="">Select Country</option>
-            <option>United States</option>
-            <option>United Kingdom</option>
-            <option>Germany</option>
-            <option>France</option>
-            <option>Japan</option>
-          </select>
-        </div>
+        <div class="form-group"><label class="form-label">Country</label><select class="form-input" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>Germany</option><option>France</option><option>Japan</option></select></div>
 
         <h3 style="font-size: 1.2rem; margin: 2rem 0 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem;">3. Shipping Address</h3>
-        <div class="checkbox-group" style="margin-bottom: 1.5rem;">
-          <input type="checkbox" id="same_billing" checked>
-          <label for="same_billing" style="font-size: 13px; color: var(--text-soft);">Ship to billing address</label>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Shipping Method</label>
-          <select class="form-input">
-            <option>FedEx Priority Overnight (-20°C Cold Chain)</option>
-            <option>DHL Express International</option>
-          </select>
-        </div>
-
+        <div class="checkbox-group" style="margin-bottom: 1.5rem;"><input type="checkbox" id="same_billing" checked><label for="same_billing" style="font-size: 13px; color: var(--text-soft);">Ship to billing address</label></div>
+        
         <h3 style="font-size: 1.2rem; margin: 2rem 0 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem;">4. Payment Information</h3>
-        <div class="form-group">
-          <label class="form-label">Card Number</label>
-          <input type="text" class="form-input" placeholder="0000 0000 0000 0000" required>
-        </div>
+        <div class="form-group"><label class="form-label">Card Number</label><input type="text" class="form-input" placeholder="0000 0000 0000 0000" required></div>
         <div class="form-grid-2">
-          <div class="form-group">
-            <label class="form-label">Expiration (MM/YY)</label>
-            <input type="text" class="form-input" placeholder="MM/YY" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">CVC</label>
-            <input type="text" class="form-input" placeholder="123" required>
-          </div>
+          <div class="form-group"><label class="form-label">Expiration (MM/YY)</label><input type="text" class="form-input" placeholder="MM/YY" required></div>
+          <div class="form-group"><label class="form-label">CVC</label><input type="text" class="form-input" placeholder="123" required></div>
         </div>
       </div>
 
-      <!-- Summary & Acknowledgment -->
       <div class="summary-box" style="position: sticky; top: 100px;">
         <h3 class="h-section" style="font-size: 1.2rem; margin-bottom: 2rem;">Order Summary</h3>
         
         <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--line-soft); padding-bottom: 1.5rem;">
-          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 13px;">
-            <span>BPC-157 Acetate x1</span>
-            <span>€68.00</span>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-size: 13px;">
-            <span>Semaglutide Ref. x2</span>
-            <span>€420.00</span>
-          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 13px;"><span>Items in Cart</span><span id="summary-subtotal">€0.00</span></div>
         </div>
 
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span>€488.00</span>
-        </div>
-        <div class="summary-row">
-          <span>Shipping</span>
-          <span>€45.00</span>
-        </div>
-        <div class="summary-row total">
-          <span>Total</span>
-          <span>€533.00</span>
-        </div>
+        <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal-2">€0.00</span></div>
+        <div class="summary-row"><span>Shipping (Cold Chain)</span><span id="summary-shipping">€45.00</span></div>
+        <div class="summary-row total"><span>Total</span><span id="summary-total">€0.00</span></div>
 
         <div style="margin: 2rem 0; padding: 1.5rem; background: var(--red-soft); border: 1px solid var(--red-line);">
           <div class="mono" style="color: var(--red); font-size: 11px; text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500;">⚠ RESEARCH ACKNOWLEDGMENT REQUIRED</div>
@@ -155,7 +90,7 @@
           </div>
         </div>
 
-        <button type="submit" id="placeOrderBtn" class="btn btn-red btn-lg" disabled style="opacity: 0.5; cursor: not-allowed;">Place Order</button>
+        <button type="submit" id="place-order-btn" class="btn btn-red btn-lg" disabled style="opacity: 0.5; cursor: not-allowed;">Place Order</button>
         <p class="mono" style="margin-top: 1.5rem; font-size: 10px; color: var(--text-mute); text-align: center;">PAYMENTS ARE SECURELY ENCRYPTED</p>
       </div>
     </form>
@@ -176,29 +111,22 @@
   <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
 </footer>
 
+<div id="toast-wrap" class="toast-wrap"></div>
+<script src="js/app.js"></script>
 <script>
-const checkAck = document.getElementById('ruo_acknowledge');
-const placeBtn = document.getElementById('placeOrderBtn');
+  // Override checkout summary specifically for this page to include shipping
+  window.onload = function() {
+    let cart = JSON.parse(localStorage.getItem('tianbio_cart')) || [];
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const shipping = cart.length > 0 ? 45.00 : 0.00;
+    const total = subtotal + shipping;
 
-checkAck.addEventListener('change', function() {
-  if (this.checked) {
-    placeBtn.disabled = false;
-    placeBtn.style.opacity = '1';
-    placeBtn.style.cursor = 'pointer';
-  } else {
-    placeBtn.disabled = true;
-    placeBtn.style.opacity = '0.5';
-    placeBtn.style.cursor = 'not-allowed';
-  }
-});
-
-placeBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-  if (!this.disabled) {
-    alert('Order placed successfully. A confirmation has been sent to your institutional email.');
-    window.location.href = 'account.html';
-  }
-});
+    if (document.getElementById('summary-subtotal')) {
+      document.getElementById('summary-subtotal').textContent = `€${subtotal.toFixed(2)}`;
+      document.getElementById('summary-subtotal-2').textContent = `€${subtotal.toFixed(2)}`;
+      document.getElementById('summary-total').textContent = `€${total.toFixed(2)}`;
+    }
+  };
 </script>
 </body>
 </html>

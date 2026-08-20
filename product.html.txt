@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPC-157 Acetate — TianBio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE.</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">天</div>
+      <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container-wide">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a><span>/</span><a href="products.html">Catalog</a><span>/</span>BPC-157 Acetate
+    </div>
+
+    <div class="product-detail-grid">
+      <div class="product-image" style="aspect-ratio: 1/1; border: 1px solid var(--line); background: var(--bg-soft); height: fit-content;">
+        <span class="badge badge-red product-ruo">RUO</span>
+        <svg viewBox="0 0 100 140" width="50%" height="50%">
+          <rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/>
+          <rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/>
+          <rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/>
+          <rect x="24" y="44" width="12" height="12" fill="#B30000"/>
+          <text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text>
+          <text x="40" y="48" font-family="monospace" font-size="4" fill="#0A0A0A">TB-BPC157</text>
+          <text x="40" y="54" font-family="monospace" font-size="3" fill="#0A0A0A">5MG · 99.2%</text>
+        </svg>
+      </div>
+
+      <div class="product-details">
+        <div class="eyebrow">Research Peptide · TB-BPC157-5MG</div>
+        <h1 class="h-section" style="margin: 1rem 0;">BPC-157 Acetate</h1>
+        <p class="lede">High-purity lyophilized BPC-157 acetate for in vitro laboratory research applications. Supplied with lot-specific Certificate of Analysis.</p>
+        
+        <ul class="spec-list">
+          <li><span>Catalog Number</span> TB-BPC157-5MG</li>
+          <li><span>CAS Number</span> 137525-51-0</li>
+          <li><span>Purity</span> ≥ 99.2% (HPLC)</li>
+          <li><span>Molecular Formula</span> C₆₂H₉₈N₁₆O₂₂</li>
+          <li><span>Molecular Weight</span> 1419.55 g/mol</li>
+          <li><span>Appearance</span> White to off-white lyophilized powder</li>
+          <li><span>Storage</span> -20°C, protected from light</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+          <div class="product-price" style="font-size: 1.5rem;">€68.00<small style="display: inline; margin-left: 0.5rem; color: var(--text-mute);">/ 5mg vial</small></div>
+        </div>
+
+        <div class="form-group" style="max-width: 150px; margin-bottom: 2rem;">
+          <label class="form-label">Quantity</label>
+          <input type="number" class="form-input" value="1" min="1" id="qty-input">
+        </div>
+
+        <button class="btn btn-red btn-lg" style="max-width: 250px;" onclick="addToCart('BPC-157 Acetate', 'TB-BPC157-5MG', 68.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="desc">Description</button>
+      <button class="tab" data-tab="specs">Specifications</button>
+      <button class="tab" data-tab="docs">Documents</button>
+      <button class="tab" data-tab="disc">Disclaimer</button>
+    </div>
+
+    <div class="tab-content active" id="tab-desc">
+      <p>BPC-157 (Body Protection Compound-157) is a synthetic pentadecapeptide consisting of 15 amino acids. TianBio supplies BPC-157 strictly as a reference standard for analytical chemistry and in vitro laboratory research.</p>
+      <br>
+      <p>This material is lyophilized under sterile conditions and packaged in amber glass vials to ensure stability during transport and storage. Each vial is flushed with nitrogen before sealing.</p>
+    </div>
+    <div class="tab-content" id="tab-specs">
+      <p>Verified by Reverse-Phase HPLC (≥99.2%) and MALDI-TOF Mass Spectrometry. Net content 5mg. Residual TFA content < 1%. Endotoxin tested.</p>
+    </div>
+    <div class="tab-content" id="tab-docs">
+      <p><a href="#" style="color: var(--red);">Download Certificate of Analysis (Lot TB-2403-A14)</a><br>
+      <a href="#" style="color: var(--red);">Download MSDS</a><br>
+      <a href="#" style="color: var(--red);">Download Handling Protocol</a></p>
+    </div>
+    <div class="tab-content" id="tab-disc">
+      <p>This product is intended FOR LABORATORY RESEARCH USE ONLY. Not for human or veterinary use. Not for diagnostic, therapeutic, or clinical applications. TianBio does not provide dosage information or usage protocols. Researchers must consult primary literature.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><div class="brand-mark">天</div><div class="brand-text">TianBio<small>Precision Research Peptides</small></div></a>
+      <p>TianBio supplies research chemicals exclusively for qualified laboratory research. Products are not medicines, dietary supplements, or food products.</p>
+    </div>
+    <div class="footer-col"><h5>Catalog</h5><ul><li><a href="products.html">Growth Factors</a></li><li><a href="products.html">Research Peptides</a></li><li><a href="products.html">Laboratory Reagents</a></li><li><a href="products.html">Reference Standards</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About TianBio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Terms of Sale</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Research Use Statement</a></li></ul></div>
+  </div>
+  <div class="footer-disclaimer">TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE.</div>
+  <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
+</footer>
+
+<div id="toast-wrap" class="toast-wrap"></div>
+<script src="js/app.js"></script>
+</body>
+</html>

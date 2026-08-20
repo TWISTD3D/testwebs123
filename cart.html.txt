@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart — TianBio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE.</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">天</div>
+      <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container-wide">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a><span>/</span>Shopping Cart
+    </div>
+
+    <h1 class="h-section" style="margin-bottom: 3rem;">Shopping Cart</h1>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: flex-start;">
+      <div>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-tbody">
+            <!-- Cart items rendered by JS -->
+          </tbody>
+        </table>
+        <div style="margin-top: 2rem;">
+          <a href="products.html" class="btn">← Continue Shopping</a>
+        </div>
+      </div>
+
+      <div class="summary-box" style="position: sticky; top: 100px;">
+        <h3 class="h-section" style="font-size: 1.2rem; margin-bottom: 2rem;">Order Summary</h3>
+        
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">€0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="summary-shipping">€0.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Estimated Total</span>
+          <span id="summary-total">€0.00</span>
+        </div>
+
+        <div class="checkbox-group" style="margin: 2rem 0;">
+          <input type="checkbox" id="ruo_cart_check" required>
+          <label for="ruo_cart_check" style="font-size: 12px; color: var(--text-soft);">I confirm these products are being purchased solely for laboratory research purposes.</label>
+        </div>
+
+        <a href="checkout.html" class="btn btn-red btn-lg">Proceed to Checkout</a>
+        
+        <p class="mono" style="margin-top: 1.5rem; font-size: 10px; color: var(--text-mute); text-align: center;">RESEARCH USE ONLY. NOT FOR HUMAN USE.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><div class="brand-mark">天</div><div class="brand-text">TianBio<small>Precision Research Peptides</small></div></a>
+      <p>TianBio supplies research chemicals exclusively for qualified laboratory research. Products are not medicines, dietary supplements, or food products.</p>
+    </div>
+    <div class="footer-col"><h5>Catalog</h5><ul><li><a href="products.html">Growth Factors</a></li><li><a href="products.html">Research Peptides</a></li><li><a href="products.html">Laboratory Reagents</a></li><li><a href="products.html">Reference Standards</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About TianBio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Terms of Sale</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Research Use Statement</a></li></ul></div>
+  </div>
+  <div class="footer-disclaimer">TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE.</div>
+  <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
+</footer>
+
+<div id="toast-wrap" class="toast-wrap"></div>
+<script src="js/app.js"></script>
+</body>
+</html>

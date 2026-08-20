@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalog — TianBio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="ruo-banner">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE.</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">天</div>
+      <div class="brand-text">TianBio<small>Precision Research Peptides</small></div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 4h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container-wide" style="padding-top: 2rem;">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a><span>/</span>Catalog
+    </div>
+    <h1 class="h-section" style="margin-bottom: 2rem;">Research Catalog</h1>
+
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="filter-group">
+          <div class="filter-title">Search</div>
+          <input type="text" class="form-input" placeholder="Catalog # or CAS">
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Categories</div>
+          <label class="filter-option"><input type="checkbox"> Growth Factors</label>
+          <label class="filter-option"><input type="checkbox" checked> Research Peptides</label>
+          <label class="filter-option"><input type="checkbox"> Laboratory Reagents</label>
+          <label class="filter-option"><input type="checkbox"> Reference Standards</label>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Availability</div>
+          <label class="filter-option"><input type="checkbox" checked> In Stock</label>
+          <label class="filter-option"><input type="checkbox"> Back-order</label>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Purity</div>
+          <label class="filter-option"><input type="checkbox"> ≥ 98.0%</label>
+          <label class="filter-option"><input type="checkbox" checked> ≥ 99.0%</label>
+          <label class="filter-option"><input type="checkbox"> ≥ 99.5%</label>
+        </div>
+      </aside>
+
+      <div class="catalog-main">
+        <div class="sort-bar">
+          <div class="mono" style="color: var(--text-mute);">Showing 1-8 of 240 entries</div>
+          <select class="sort-select">
+            <option>Sort by: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Purity: High to Low</option>
+          </select>
+        </div>
+
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-BPC157-5MG</div>
+              <h3 class="product-name"><a href="product.html">BPC-157 Acetate</a></h3>
+              <div class="product-specs"><span>Purity: 99.2%</span><span>MW: 1419.5 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€68<small>5 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('BPC-157 Acetate', 'TB-BPC157-5MG', 68.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-GHRELIN-2MG</div>
+              <h3 class="product-name"><a href="product.html">Ghrelin (Human)</a></h3>
+              <div class="product-specs"><span>Purity: 98.6%</span><span>MW: 3370.9 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€124<small>2 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('Ghrelin (Human)', 'TB-GHRELIN-2MG', 124.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-SEMAG-10MG</div>
+              <h3 class="product-name"><a href="product.html">Semaglutide Ref.</a></h3>
+              <div class="product-specs"><span>Purity: 99.5%</span><span>MW: 4113.6 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€210<small>10 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('Semaglutide Ref.', 'TB-SEMAG-10MG', 210.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-TB500-5MG</div>
+              <h3 class="product-name"><a href="product.html">TB-500 Fragment</a></h3>
+              <div class="product-specs"><span>Purity: 99.0%</span><span>MW: 4161.8 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€82<small>5 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('TB-500 Fragment', 'TB-TB500-5MG', 82.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-MT2-10MG</div>
+              <h3 class="product-name"><a href="product.html">Melanotan II Ref.</a></h3>
+              <div class="product-specs"><span>Purity: 99.1%</span><span>MW: 1024.2 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€94<small>10 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('Melanotan II Ref.', 'TB-MT2-10MG', 94.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-red product-ruo">RUO</span>
+              <svg viewBox="0 0 100 140" width="60%" height="60%"><rect x="35" y="5" width="30" height="10" fill="#1a1a1a"/><rect x="25" y="15" width="50" height="100" fill="#2a1004" stroke="#1a0a02"/><rect x="20" y="40" width="60" height="50" fill="#EAEAEA"/><rect x="24" y="44" width="12" height="12" fill="#B30000"/><text x="30" y="53" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">天</text></svg>
+            </div>
+            <div class="product-body">
+              <div class="product-cat">TB-EGF-1MG</div>
+              <h3 class="product-name"><a href="product.html">EGF Recombinant</a></h3>
+              <div class="product-specs"><span>Purity: 98.8%</span><span>MW: 6200 g/mol</span></div>
+              <div class="product-footer">
+                <div class="product-price">€156<small>1 mg vial</small></div>
+                <button class="product-add" onclick="addToCart('EGF Recombinant', 'TB-EGF-1MG', 156.00)">Add to cart →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="pagination">
+          <button class="page-btn">←</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><div class="brand-mark">天</div><div class="brand-text">TianBio<small>Precision Research Peptides</small></div></a>
+      <p>TianBio supplies research chemicals exclusively for qualified laboratory research. Products are not medicines, dietary supplements, or food products.</p>
+    </div>
+    <div class="footer-col"><h5>Catalog</h5><ul><li><a href="products.html">Growth Factors</a></li><li><a href="products.html">Research Peptides</a></li><li><a href="products.html">Laboratory Reagents</a></li><li><a href="products.html">Reference Standards</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About TianBio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Terms of Sale</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Research Use Statement</a></li></ul></div>
+  </div>
+  <div class="footer-disclaimer">TIANBIO SUPPLIES RESEARCH CHEMICALS EXCLUSIVELY FOR QUALIFIED LABORATORY RESEARCH. PRODUCTS ARE NOT MEDICINES, DIETARY SUPPLEMENTS, OR FOOD PRODUCTS. NOT FOR HUMAN OR VETERINARY USE.</div>
+  <div class="footer-bottom"><div>© 2024 TianBio · Catalog v2.4.1</div><div>FOR LABORATORY RESEARCH USE ONLY</div></div>
+</footer>
+
+<div id="toast-wrap" class="toast-wrap"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
